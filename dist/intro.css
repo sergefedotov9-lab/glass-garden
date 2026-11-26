@@ -1,0 +1,77 @@
+.loading-screen {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  justify-items: center;
+  gap: clamp(10px, 2vh, 22px);
+  overflow: hidden;
+  padding: 18px 12px 26px;
+  background: radial-gradient(ellipse at 50% 36%, #294e56, #0c212c 72%);
+  color: #e7f7f2;
+  transition: opacity .17s ease-out;
+}
+.loading-screen[hidden] { display: none; }
+.loading-screen.loading-done { opacity: 0; pointer-events: none; }
+.loading-screen img {
+  display: block;
+  width: auto;
+  max-width: min(100%, 940px);
+  height: auto;
+  max-height: 68svh;
+  border-radius: 22px;
+  object-fit: contain;
+}
+.loading-caption { display: grid; justify-items: center; gap: 8px; padding: 0 12px; text-align: center; }
+.loading-caption strong { font-size: clamp(1.45rem, 5vw, 2.4rem); letter-spacing: -.035em; }
+.loading-caption > span:not(.loading-bar) { font-size: .875rem; color: #b7d9d4; }
+.loading-bar { display: block; width: min(164px, 58vw); height: 3px; overflow: hidden; border-radius: 4px; background: #82b9ac40; }
+.loading-bar::before {
+  content: "";
+  display: block;
+  width: 45%;
+  height: 100%;
+  border-radius: inherit;
+  background: #b7f1db;
+  animation: loading-slide .85s ease-in-out infinite alternate;
+}
+@keyframes loading-slide { to { transform: translateX(122%); } }
+
+#tutorial { width: min(calc(100% - 20px), 478px); padding: 0; text-align: start; }
+.tutorial-visual {
+  display: grid;
+  place-items: center;
+  height: clamp(103px, 26svh, 206px);
+  overflow: hidden;
+  background: radial-gradient(ellipse, #376b64 0%, #163942 75%);
+}
+.tutorial-city { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 66%; }
+.tutorial-match, .tutorial-points { display: none; }
+#tutorial[data-step="match"] .tutorial-city, #tutorial[data-step="build"] .tutorial-city { display: none; }
+#tutorial[data-step="match"] .tutorial-match { display: flex; align-items: center; gap: 9px; }
+.tutorial-match i {
+  display: block;
+  width: clamp(38px, 13vw, 62px);
+  aspect-ratio: 1;
+  border: 1px solid #d4fff2;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 31% 24%, #e8fff1 0%, #ddfff0 7%, transparent 28%),
+    radial-gradient(circle at 43% 40%, #6da68a50 20%, #7ac6a3bb 63%, #90e2b9 91%);
+  box-shadow: inset 0 1px 7px #eaffedc0, 0 5px 14px #05171375;
+}
+#tutorial[data-step="build"] .tutorial-points { display: flex; align-items: center; gap: 9px; color: #effffb; font-size: clamp(1.6rem, 7vw, 2.8rem); }
+.tutorial-points span { color: #f6d98f; }
+.tutorial-content { padding: 16px clamp(14px, 5vw, 23px) 21px; }
+.tutorial-step { margin: 0 0 6px; font-size: .875rem; }
+.tutorial-content h2 { margin: 0; }
+#tutorial-copy { margin: 10px 0 17px; line-height: 1.45; }
+.tutorial-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.tutorial-controls button[hidden] { display: none; }
+#music-toggle, #open-tutorial { width: 100%; }
+#music-toggle { margin-top: 7px; }
+#music-toggle[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+@media (prefers-reduced-motion: reduce) {
+  .loading-bar::before { animation: none; }
+}
