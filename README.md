@@ -8,6 +8,16 @@
 
 [Обсудить игру в Telegram](https://t.me/krugly_kvartal) — обновления, видео и скриншоты городов игроков.
 
+## Скриншоты Android-версии 1.22
+
+| Головоломка «три в ряд» | Карта города сверху |
+| --- | --- |
+| <a href="docs/screenshots/v1.22/puzzle.webp"><img src="docs/screenshots/v1.22/puzzle.webp" width="285" alt="Поле «три в ряд» со стеклянными шарами"></a> | <a href="docs/screenshots/v1.22/city-plan.webp"><img src="docs/screenshots/v1.22/city-plan.webp" width="285" alt="Карта города «Янтарная гавань» сверху в режиме строительства"></a> |
+
+### Объёмный вид города
+
+<a href="docs/screenshots/v1.22/city-isometric.webp"><img src="docs/screenshots/v1.22/city-isometric.webp" width="720" alt="Объёмный вид «Янтарной гавани» в горизонтальном режиме"></a>
+
 ## Как играть
 
 1. Нажмите на два соседних шара или сдвиньте один свайпом. Если в ряд соберутся три или больше одинаковых шара, они разобьются со звоном стекла.
