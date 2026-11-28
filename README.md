@@ -6,6 +6,8 @@
 
 [Скачать APK «Круглый квартал» 1.14](https://raw.githubusercontent.com/sergefedotov9-lab/glass-garden/main/downloads/KruglyKvartal-1.14.apk)
 
+[Обсудить игру в Telegram](https://t.me/krugly_kvartal) — обновления, видео и скриншоты городов игроков.
+
 ## Как играть
 
 1. Нажмите на два соседних шара или сдвиньте один свайпом. Если в ряд соберутся три или больше одинаковых шара, они разобьются со звоном стекла.
